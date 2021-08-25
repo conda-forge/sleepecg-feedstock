@@ -1,5 +1,5 @@
 {% set name = "sleepecg" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fd89d91d5ee5bc1ff640adb68a5b184b52022a987ab730368307a0ee7dbfca5f
+  sha256: 78d4f7118cde619db4558efd0b0a374c739bde015157bc07b4f40270fa511bd9
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
-  skip: True  # [py<37]
+  script: {{ PYTHON }} -m pip install . -vv
+  skip: true  # [py<37]
 
 requirements:
   build:
@@ -44,7 +44,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'A toolbox for sleep stage classification using ECG data'
+  summary: A toolbox for sleep stage classification using ECG data
   dev_url: https://github.com/cbrnr/sleepecg
 
 extra:
