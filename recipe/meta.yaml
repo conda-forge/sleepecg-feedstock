@@ -30,6 +30,7 @@ requirements:
     - numba >=0.53.0
     - pandas >=1.2.0
     - wfdb >=3.3.0
+    - PyYAML>=5.4.0
 
 test:
   imports:
