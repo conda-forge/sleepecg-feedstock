@@ -1,5 +1,5 @@
 {% set name = "sleepecg" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a8f13c1610c16dbf364b0a9d1230c73767e3653a12f3838fb3ba1a7589072ba2
+  sha256: abfe07e0b90dae47d6bdfe13ee7d5dab6a8c3dcbbaf81191b4c3773744939598
 
 build:
   number: 0
