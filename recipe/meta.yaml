@@ -34,7 +34,7 @@ requirements:
     - joblib >=1.0.0
     - mne-base >=0.23.0
     - matplotlib-base >=3.4.0
-    - tensorflow-cpu >=2.7.0
+    - tensorflow >=2.7.0  # [not win]
 
 test:
   imports:
