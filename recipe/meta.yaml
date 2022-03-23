@@ -10,7 +10,7 @@ source:
   sha256: 42e475c9d2f88faa5eb43a5db7cb5f3c37a190f50c5f1e899b1a6633c97727ce
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<37]
 
@@ -20,7 +20,7 @@ requirements:
   host:
     - python
     - pip
-    - numpy 1.20.*
+    - numpy
   run:
     - {{ pin_compatible('numpy') }}
     - python
@@ -31,6 +31,10 @@ requirements:
     - pandas >=1.2.0
     - wfdb >=3.3.0
     - PyYAML >=5.4.0
+    - joblib >=1.0.0
+    - mne-base >=0.23.0
+    - matplotlib-base >=3.4.0
+    - tensorflow >=2.7.0  # [not win]
 
 test:
   imports:
@@ -51,3 +55,4 @@ about:
 extra:
   recipe-maintainers:
     - hoechenberger
+    - larsoner
