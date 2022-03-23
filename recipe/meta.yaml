@@ -31,6 +31,8 @@ requirements:
     - pandas >=1.2.0
     - wfdb >=3.3.0
     - PyYAML >=5.4.0
+    - joblib >=1.0.0
+    - mne-base >=0.23.0
 
 test:
   imports:
