@@ -20,7 +20,7 @@ requirements:
   host:
     - python
     - pip
-    - numpy >=1.20
+    - numpy
   run:
     - {{ pin_compatible('numpy') }}
     - python
