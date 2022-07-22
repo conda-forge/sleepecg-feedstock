@@ -1,5 +1,5 @@
 {% set name = "sleepecg" %}
-{% set version = "0.5.0" %}
+{% set version = "0.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 42e475c9d2f88faa5eb43a5db7cb5f3c37a190f50c5f1e899b1a6633c97727ce
+  sha256: 51de391d17a5d363bad2f56d27e6efaed4a085a39e355c120d80831bb29f3ae2
 
 build:
-  number: 2
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
-  skip: true  # [py<37]
+  skip: true  # [py<38]
 
 requirements:
   build:
@@ -28,15 +28,15 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - python
     - requests >=2.25.0
-    - scipy >=1.6.0
-    - tqdm >=4.59.0
-    - numba >=0.53.0
-    - pandas >=1.2.0
-    - wfdb >=3.3.0
+    - scipy >=1.7.0
+    - tqdm >=4.60.0
+    - numba >=0.55.0
+    - pandas >=1.4.0
+    - wfdb >=3.4.0
     - PyYAML >=5.4.0
     - joblib >=1.0.0
-    - mne-base >=0.23.0
-    - matplotlib-base >=3.4.0
+    - mne-base >=1.0.0
+    - matplotlib-base >=3.5.0
     - tensorflow >=2.7.0  # [not win]
 
 test:
