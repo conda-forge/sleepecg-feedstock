@@ -1,30 +1,11 @@
-From c7ed5de46eff478eabcb4dcda7e9543f0930bf6b Mon Sep 17 00:00:00 2001
-From: Clemens Brunner <clemens.brunner@gmail.com>
-Date: Thu, 13 Apr 2023 11:46:21 +0200
-Subject: [PATCH] Explicitly include classifiers and test
-
----
- setup.cfg                 | 2 ++
- sleepecg/test/__init__.py | 0
- 2 files changed, 2 insertions(+)
- create mode 100644 sleepecg/test/__init__.py
-
-diff --git a/setup.cfg b/setup.cfg
-index 54de412..954526a 100644
---- a/setup.cfg
-+++ b/setup.cfg
+--- setup.cfg
++++ setup.cfg
 @@ -84,6 +84,8 @@ cibw =
  [options.packages.find]
  exclude =
      examples
 +include =
 +    sleepecg.classifiers
- 
- 
- [flake8]
-diff --git a/sleepecg/test/__init__.py b/sleepecg/test/__init__.py
-new file mode 100644
-index 0000000..e69de29
--- 
-2.39.2 (Apple Git-143)
 
+
+ [flake8]
