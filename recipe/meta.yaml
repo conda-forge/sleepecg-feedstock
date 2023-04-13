@@ -34,7 +34,6 @@ requirements:
     - scipy >=1.7.0
     - tqdm >=4.60.0
     - numba >=0.55.0
-    - pandas >=1.4.0
     - wfdb >=3.4.0
     - PyYAML >=5.4.0
     - joblib >=1.0.0
@@ -55,7 +54,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: A toolbox for sleep stage classification using ECG data
+  summary: A package for sleep stage classification using ECG data
   dev_url: https://github.com/cbrnr/sleepecg
 
 extra:
