@@ -31,6 +31,7 @@ requirements:
     - {{ pin_compatible('numpy') }}
     - python
     - requests >=2.25.0
+    - numpy
     - scipy >=1.7.0
     - tqdm >=4.60.0
     - PyYAML >=5.4.0
