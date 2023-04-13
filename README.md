@@ -7,7 +7,7 @@ Home: https://sleepecg.readthedocs.io/
 
 Package license: BSD-3-Clause
 
-Summary: A toolbox for sleep stage classification using ECG data
+Summary: A package for sleep stage classification using ECG data
 
 Development: https://github.com/cbrnr/sleepecg
 
