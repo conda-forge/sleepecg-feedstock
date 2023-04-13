@@ -1,11 +1,11 @@
 --- setup.cfg
 +++ setup.cfg
-@@ -84,6 +84,8 @@ cibw =
+@@ -72,6 +72,8 @@ cibw =
  [options.packages.find]
  exclude =
-     examples
+ 	examples
 +include =
-+    sleepecg.classifiers
-
++	sleepecg.classifiers
 
  [flake8]
+ extend-ignore = E203  # for Black compatibility
