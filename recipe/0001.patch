@@ -1,11 +1,12 @@
---- a/setup.cfg
-+++ b/setup.cfg
-@@ -72,6 +72,8 @@
+--- setup.cfg	2023-04-13 07:51:12
++++ setup1.cfg	2023-04-13 17:21:32
+@@ -72,6 +72,9 @@
  [options.packages.find]
  exclude = 
  	examples
 +include =
-+	sleepecg.classifiers
++    sleepecg.classifiers
++	sleepecg.test
  
  [flake8]
  extend-ignore = E203  # for Black compatibility
