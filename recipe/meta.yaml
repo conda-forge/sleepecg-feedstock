@@ -1,5 +1,5 @@
 {% set name = "sleepecg" %}
-{% set version = "0.5.3" %}
+{% set version = "0.5.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,9 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 64dc334b9485a2015f4ca9b91905006452f5b5a7e6672f1397231b8e2a0f0c14
+  sha256: c75191eee3f0416a513c55a59262ca87b8f735dc720c1ac4fc720bd238a7cf85
+  patches:
+    - 0001.patch
 
 build:
   number: 0
@@ -27,20 +29,20 @@ requirements:
     - python
     - pip
     - numpy
+    - numpy >=1.20.0
   run:
     - {{ pin_compatible('numpy') }}
     - python
     - requests >=2.25.0
     - scipy >=1.7.0
     - tqdm >=4.60.0
-    - numba >=0.55.0
-    - pandas >=1.4.0
-    - wfdb >=3.4.0
     - PyYAML >=5.4.0
     - joblib >=1.0.0
-    - mne-base >=1.0.0
     - matplotlib-base >=3.5.0
+    - mne-base >=1.0.0
+    - numba >=0.55.0
     - tensorflow >=2.7.0  # [not win]
+    - wfdb >=3.4.0
 
 test:
   imports:
@@ -55,7 +57,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: A toolbox for sleep stage classification using ECG data
+  summary: A package for sleep stage classification using ECG data
   dev_url: https://github.com/cbrnr/sleepecg
 
 extra:
