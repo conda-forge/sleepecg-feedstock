@@ -41,7 +41,7 @@ requirements:
     - numba >=0.55.0  # [py<312]
     - tensorflow >=2.7.0  # [not win and py<312]
     - wfdb >=3.4.0
-    - edfio >= 0.1.1
+    - edfio >=0.1.1
 
 test:
   imports:
