@@ -16,7 +16,7 @@ build:
 
 requirements:
   build:
-    - python                                 # [build_platform != target_platform]
+    - python {{ python_min }}                # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
     - {{ compiler('c') }}
@@ -25,15 +25,14 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - numpy                                  # [build_platform != target_platform]
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - setuptools
     - setuptools_scm
-    - numpy
     - numpy >=1.20.0
   run:
     - {{ pin_compatible('numpy') }}
-    - python
+    - python >= {{ python_min }}
     - requests >=2.25.0
     - scipy >=1.7.0
     - tqdm >=4.60.0
@@ -53,6 +52,7 @@ test:
     - pip
   commands:
     - pip check
+    - python -c "import sleepecg; assert sleepecg.__version__ == '{{ version }}', sleepecg.__version__"
 
 about:
   home: https://sleepecg.readthedocs.io/
