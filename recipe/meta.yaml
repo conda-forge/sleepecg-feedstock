@@ -40,7 +40,8 @@ requirements:
     # needs https://github.com/conda-forge/numba-feedstock/pull/152
     - numba >=0.61.0  # [py<313]
     - tensorflow >=2.7.0  # [not win and not ppc64le and not aarch64 and py<313]
-    - wfdb >=4.2.0
+    # needs https://github.com/conda-forge/edfio-feedstock/pull/16
+    - wfdb >=4.2.0  # [py<313]
     - edfio >=0.4.4
 
 test:
