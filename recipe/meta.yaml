@@ -30,6 +30,7 @@ requirements:
   run:
     - python
     - requests >=2.32.3
+    - numpy >=1.26.0
     - scipy >=1.13.0
     - tqdm >=4.66.0
     - PyYAML >=6.0.0
