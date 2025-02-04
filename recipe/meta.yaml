@@ -10,7 +10,7 @@ source:
   sha256: f15ee55ec5567e13cb57a99009d2fe8533702a32cbb4d24c0551fefd45e920ac
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<310]
 
@@ -39,7 +39,10 @@ requirements:
     - mne-base >=1.0.0
     # needs https://github.com/conda-forge/numba-feedstock/pull/152
     - numba >=0.61.0  # [py<313]
-    - tensorflow >=2.7.0  # [not win and not ppc64le and not aarch64 and py<313]
+    # TensorFlow disabled because of slow updates, people can install themselves
+    # if they want the classifiers to be usable. See
+    # https://github.com/conda-forge/sleepecg-feedstock/issues/28
+    # - tensorflow >=2.7.0  # [not win and not ppc64le and not aarch64 and py<313]
     - wfdb >=4.2.0
     - edfio >=0.4.4
 
