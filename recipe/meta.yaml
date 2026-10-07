@@ -1,16 +1,16 @@
 {% set name = "sleepecg" %}
-{% set version = "0.5.9" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f15ee55ec5567e13cb57a99009d2fe8533702a32cbb4d24c0551fefd45e920ac
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 474eee95698d2774ccd221f9d0dfa9048e8360b9b155673f90eec8dc5d677de3
 
 build:
-  number: 4
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [py<310]
 
